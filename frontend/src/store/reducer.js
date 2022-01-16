@@ -1,11 +1,6 @@
 import React from "react";
 const initialState = {
-  books: [
-    { id: 1, title: "harry potter", price: 500 },
-    { id: 2, title: "harry potter2", price: 500 },
-  ],
-  num: 10,
-  str: "faiza",
+  books: [],
   posts: []
 };
 const reducer = (state = initialState, action) => {
@@ -22,13 +17,19 @@ const reducer = (state = initialState, action) => {
         ...state,
         books: [...state.books, ...newBook]
       }
-    case "GET_POST_SUCCESS":
-      console.log(action.payload)
-      return {
-        ...state,
-        posts: action.payload
-      }
-
+      case "GET_POST_SUCCESS":
+        console.log(action.payload)
+        return {
+          ...state,
+          posts: action.payload
+        }
+        case "GET_BOOKS_SUCCESS":
+          console.log(action.payload)
+          return {
+            ...state,
+            books: action.payload
+          }
+      
     default:
       return state
   }

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const instance = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com',
+    baseURL: 'http://localhost:5000/books',
     headers:{
       "Access-Control-Allow-Origin": "*"
     }
@@ -10,4 +10,7 @@ export const instance = axios.create({
 
 export function getPosts(){
     return instance.get(`/posts`)
+}
+export function getBooks(){
+  return instance.get(`/`)
 }

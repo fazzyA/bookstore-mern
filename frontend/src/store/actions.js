@@ -16,3 +16,15 @@ console.log("🚀 ~ file: actions.js ~ line 12 ~ getPostsSuccess ~ payload", pay
 export const getPostsFail = (payload) =>{
     return {type: 'GET_POST_FAIL', payload}
 }
+
+export const getBooks = () =>{
+    return {type: 'GET_BOOKS'}
+}
+export const getBooksSuccess = (payload) =>{
+console.log("🚀 ~ file: actions.js ~ line 12 ~ getPostsSuccess ~ payload", payload)
+    
+    return {type: 'GET_BOOKS_SUCCESS', payload}
+}
+export const getBooksFail = (payload) =>{
+    return {type: 'GET_BOOKS_FAIL', payload}
+}
